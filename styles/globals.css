@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-blue-50;
+  }
+  a {
+    @apply bg-emerald-600 text-gray-200 font-semibold shadow-md py-2 px-4 rounded-md;
+  }
+}
