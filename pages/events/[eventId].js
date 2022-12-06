@@ -3,9 +3,9 @@ import {getEventById, getAllEvents} from '../../utils/fetcher'
 
 const EventDetailPage = ({event}) => {
   return (
-    <div className="  w-full h-60 flex items-center justify-center bg-gradient-to-r from-slate-900 to-slate-700">
+    <div className="  w-full h-60 flex items-center justify-center bg-[#1da1f2]">
       <h1 className="text-6xl text-center text-white">{event.title}</h1>
-      <div className=" flex p-4 z-10 absolute top-48  bg-slate-600 shadow-xl  rounded-lg  ">
+      <div className=" flex p-4 z-10 absolute top-64  bg-[#1a2d45] shadow-xl  rounded-lg  ">
         <div className="">
           <Image
             className="hidden sm:inline-flex h-40 w-40 rounded-full ring-4 ring-white  md:scale-100"
