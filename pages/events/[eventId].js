@@ -15,6 +15,7 @@ const EventDetailPage = ({event}) => {
             height={160}
           />
         </div>
+
         <div className="flex flex-col p-6 text-start justify-center items-start">
           <time className="text-lg text-white">{event.date}</time>
           <address className="text-xl text-white">{event.location}</address>

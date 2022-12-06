@@ -14,13 +14,25 @@ const EventItem = ({title, image, date, location, id}) => {
   const link = `/events/${id}`
   return (
     <li className="  md:flex space-x-4 shadow-lg  bg-white ">
-      <div className="object-contain">
+      {/* <div className="object-contain">
         <Image
           src={image}
           className="rounded-l-lg"
           alt="Picture of the author"
           width={300}
           height={300}
+          priority
+        />
+      </div> */}
+      <div style={{position: 'relative', width: '300px', height: '200px'}}>
+        <Image
+          fill
+          src={image}
+          alt="Current Image"
+          style={{objectFit: 'contain'}}
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
           priority
         />
       </div>
@@ -31,7 +43,9 @@ const EventItem = ({title, image, date, location, id}) => {
           {formattedAddress}
         </address>
         <div className="pt-8">
-          <Button href={link} name="EventDetails"></Button>
+          <Link className="btn-primary  " href={link} name="EventDetails">
+            Event Details
+          </Link>
         </div>
       </div>
     </li>
